@@ -72,11 +72,11 @@
             </Grid>
 
             <Grid Grid.Column="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <StackPanel>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
                     <Label Content="Soczewka Prawa" HorizontalAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
                     <telerik:RadListBox Grid.Row="1" ItemsSource="{Binding ListaSoczewekOC}" DisplayMemberPath="Name"  
@@ -111,7 +111,8 @@
                     </StackPanel>
                 <StackPanel Grid.Column="3">
                     <Label Content="Soczewka prawa" />
-                        <TextBox Text="{Binding SelectedKompletOptics.SoczewkaPrawa.Name}" />
+                    <telerik:RadAutoCompleteBox/>
+                    <TextBox Text="{Binding SelectedKompletOptics.SoczewkaPrawa.Name}" />
                     </StackPanel>
         </Grid>
         </telerik:GroupBox>
